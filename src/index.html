@@ -1,18 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Update your description here" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Student Dashboard | Ncode</title>
   <link rel="stylesheet" href="css/style.css" />
 </head>
-
 <body>
   <div class="dashboard">
-
     <!-- Sidebar -->
     <aside class="sidebar">
       <div class="logo"><span class="logo-icon">🔺</span> Ncode</div>
@@ -34,148 +29,152 @@
     <!-- Main Content -->
     <main class="content">
       <header>
-        <h1>Hello, Ashley!</h1>
+        <h1>Hello, Ashley !</h1>
         <p>Ready to study hard today?</p>
       </header>
 
       <section class="panels">
-
-        <!-- Performance Panel -->
         <div class="panel performance">
-          <h2>Performance</h2>
-          <div class="performance-box">
-            <div class="performance-header">
-              <span class="legend">
-                <span class="dot"></span> Assignment Submission
-              </span>
-              <select class="monthSelect">
-                <option value="march">March</option>
-                <option value="april">April</option>
-                <option value="may">May</option>
-              </select>
+            <h2>Performance</h2>
+            <div class="performance-box">
+              <div class="performance-header">
+                <span class="legend">
+                  <span class="dot"></span> Assignment Submission
+                </span>
+                <select class="monthSelect">
+                  <option value="march">March</option>
+                  <option value="april">April</option>
+                  <option value="may">May</option>
+                </select>
+              </div>
+              <canvas class="gaugeCanvas" width="180" height="100"></canvas>
+              <p class="grade-text">Your Grade: <strong class="gradeValue">8.966</strong></p>
             </div>
-            <canvas class="gaugeCanvas" width="180" height="100"></canvas>
-            <p class="grade-text">Your Grade: <strong class="gradeValue">8.966</strong></p>
           </div>
+
+
+          <div class="panel upcoming">
+            <h2>Upcoming Lesson</h2>
+            <div class="lesson-card">
+              <div class="icon-box">🎓</div>
+              <div class="lesson-info">
+                <div class="title">UX Design Fundamentals</div>
+                <div class="details">5:30pm &nbsp;&nbsp; Eric Zakirov</div>
+              </div>
+              <a href="#" class="join-btn primary">Join</a>
+            </div>
+          
+            <div class="lesson-card">
+              <div class="icon-box">✔️</div>
+              <div class="lesson-info">
+                <div class="title">Interaction Design</div>
+                <div class="details">9:30pm &nbsp;&nbsp; Aziza Koles</div>
+              </div>
+              <a href="#" class="join-btn muted">Join</a>
+            </div>
+          
+            <div class="lesson-card">
+              <div class="icon-box">✔️</div>
+              <div class="lesson-info">
+                <div class="title">HTML CSS</div>
+                <div class="details">5:30pm &nbsp;&nbsp; Temir Aganov</div>
+              </div>
+              <a href="#" class="join-btn muted">Join</a>
+            </div>
+          </div>
+          
+
+
+
+<!--to do -->
+<div class="panel todo">
+    <h2>To do List</h2>
+    <ul class="todoList">
+      <li>
+        <span class="checkbox"></span>
+        <div class="task-content">
+          <div contenteditable="true" class="task-name">Human Interaction Designs</div>
+          <input type="date" class="task-date" />
         </div>
-
-        <!-- Upcoming Lessons Panel -->
-        <div class="panel upcoming">
-          <h2>Upcoming Lesson</h2>
-
-          <div class="lesson-card">
-            <div class="icon-box">🎓</div>
-            <div class="lesson-info">
-              <div class="title">UX Design Fundamentals</div>
-              <div class="details">5:30pm &nbsp;&nbsp; Eric Zakirov</div>
-            </div>
-            <a href="#" class="join-btn primary">Join</a>
-          </div>
-
-          <div class="lesson-card">
-            <div class="icon-box">✔️</div>
-            <div class="lesson-info">
-              <div class="title">Interaction Design</div>
-              <div class="details">9:30pm &nbsp;&nbsp; Aziza Koles</div>
-            </div>
-            <a href="#" class="join-btn muted">Join</a>
-          </div>
-
-          <div class="lesson-card">
-            <div class="icon-box">✔️</div>
-            <div class="lesson-info">
-              <div class="title">HTML CSS</div>
-              <div class="details">5:30pm &nbsp;&nbsp; Temir Aganov</div>
-            </div>
-            <a href="#" class="join-btn muted">Join</a>
-          </div>
+      </li>
+      <li>
+        <span class="checkbox"></span>
+        <div class="task-content">
+          <div contenteditable="true" class="task-name">Design system Basics</div>
+          <input type="date" class="task-date" />
         </div>
-
-        <!-- To Do List -->
-        <div class="panel todo">
-          <h2>To do List</h2>
-          <ul class="todoList">
-            <li>
-              <span class="checkbox"></span>
-              <div class="task-content">
-                <div contenteditable="true" class="task-name">Human Interaction Designs</div>
-                <input type="date" class="task-date" />
-              </div>
-            </li>
-            <li>
-              <span class="checkbox"></span>
-              <div class="task-content">
-                <div contenteditable="true" class="task-name">Design system Basics</div>
-                <input type="date" class="task-date" />
-              </div>
-            </li>
-            <li class="completed">
-              <span class="checkbox checked"></span>
-              <div class="task-content">
-                <div contenteditable="true" class="task-name">Introduction to UI</div>
-                <input type="date" class="task-date" />
-              </div>
-            </li>
-            <li class="completed">
-              <span class="checkbox checked"></span>
-              <div class="task-content">
-                <div contenteditable="true" class="task-name">Basics of Figma</div>
-                <input type="date" class="task-date" />
-              </div>
-            </li>
-          </ul>
-          <button class="addTaskBtn">+ New Task</button>
+      </li>
+      <li class="completed">
+        <span class="checkbox checked"></span>
+        <div class="task-content">
+          <div contenteditable="true" class="task-name">Introduction to UI</div>
+          <input type="date" class="task-date" />
         </div>
-
-        <!-- Course Panel -->
-        <div class="course-panel">
-          <div class="panel-header">
-            <span>My courses</span>
-            <div class="search-btn">🔍</div>
-          </div>
-
-          <div class="course-item active">
-            <div class="icon">🎨</div>
-            <div class="course-details">
-              <div class="course-title">User Experience (UX) Design</div>
-              <div class="course-meta">
-                <span>⏱ 5h 30min</span>
-                <span>📘 05 Lessons</span>
-                <span>✅ Assignments</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="course-item">
-            <div class="icon">🖌</div>
-            <div class="course-details">
-              <div class="course-title inactive">Visual Design and Branding</div>
-              <div class="course-meta">
-                <span>⏱ 4h 00min</span>
-                <span>📘 03 Lessons</span>
-                <span>✅ Assignments</span>
-              </div>
-            </div>
-          </div>
+      </li>
+      <li class="completed">
+        <span class="checkbox checked"></span>
+        <div class="task-content">
+          <div contenteditable="true" class="task-name">Basics of Figma</div>
+          <input type="date" class="task-date" />
         </div>
+      </li>
+    </ul>
+    <button class="addTaskBtn">+ New Task</button>
+  </div>
+<!--todo end-->         
 
-        <!-- Calendar -->
-        <div class="calendar-container">
-          <div class="calendar-header">
-            <button class="prevMonth">&lt;</button>
-            <div class="monthYear">June 2024</div>
-            <button class="nextMonth">&gt;</button>
-          </div>
-          <div class="calendar-days">
-            <div>Sun</div><div>Mon</div><div>Tue</div><div>Wed</div><div>Thu</div><div>Fri</div><div>Sat</div>
-          </div>
-          <div class="calendarDates"></div>
+
+<!--course panel-->  
+<div class="course-panel">
+    <div class="panel-header">
+      <span>My courses</span>
+      <div class="search-btn">🔍</div>
+    </div>
+
+    <div class="course-item active">
+      <div class="icon">🎨</div>
+      <div class="course-details">
+        <div class="course-title">User Experience (UX) Design</div>
+        <div class="course-meta">
+          <span>⏱ 5h 30min</span>
+          <span>📘 05 Lessons</span>
+          <span>✅ Assignments</span>
         </div>
+      </div>
+    </div>
 
-      </section> <!-- ✅ This was missing -->
-    </main>
+    <div class="course-item" id="course-visual"> 
+      <div class="icon">🖌</div>
+      <div class="course-details">
+        <div class="course-title inactive">Visual Design and Branding</div>
+        <div class="course-meta">
+          <span>⏱ 4h 00min</span>
+          <span>📘 03 Lessons</span>
+          <span>✅ Assignments</span>
+        </div>
+      </div>
+    </div>
   </div>
 
+<!--calendar-->  
+<div class="calendar-container">
+  <div class="calendar-header">
+    <button class="prevMonth">&lt;</button>
+    <div class="monthYear">June 2024</div>
+    <button class="nextMonth">&gt;</button>
+  </div>
+  <div class="calendar-days">
+    <div>Sun</div>
+    <div>Mon</div>
+    <div>Tue</div>
+    <div>Wed</div>
+    <div>Thu</div>
+    <div>Fri</div>
+    <div>Sat</div>
+  </div>
+  <div class="calendar-dates"  id="calendarDates"></div>
+</div>
+    </main>
   <script src="js/scripts.js"></script>
 </body>
 </html>
