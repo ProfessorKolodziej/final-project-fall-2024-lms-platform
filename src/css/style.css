@@ -90,6 +90,11 @@ body {
     margin-bottom: 16px;
   }
   
+  .gaugeCanvas{
+    width:180px;
+    height: 100px;
+  }
+  
   .performance .gauge {
     font-size: 13px;
     font-weight: 500;
