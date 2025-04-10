@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Dashboard</title>
+    <link rel="stylesheet" href="css/student-dashboard.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="dashboard">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <div class="logo">
+          <span class="logo-icon">🔺</span> Ncode
+        </div>
+        <nav>
+          <ul>
+            <li class="active">
+              <a href="student-dashboard.html">
+                <span id="icon">📊</span> Dashboard
+              </a>
+            </li>
+            <li>
+              <a href="schedule.html">
+                <span id="icon">📅</span> Schedule
+              </a>
+            </li>
+            <li>
+              <a href="link">
+                <span id="icon">📝</span> Homework
+              </a>
+            </li>
+            <li>
+              <a href="link">
+                <span id="icon">🃏</span> Cue Cards
+              </a>
+            </li>
+            <li>
+              <a href="link">
+                <span id="icon">👥</span> Networking
+              </a>
+            </li>
+            <li>
+              <a href="link">
+                <span id="icon">🎓</span> Practice Set
+              </a>
+            </li>
+            <li>
+              <a href="link">
+                <span id="icon">🎬</span> Media & Entertainment
+              </a>
+            </li>
+            <li>
+              <a href="link">
+                <span id="icon">⚙️</span> Lesson Balance
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </aside>
+
+      <!-- Main Content -->
+      <div class="content">
+        <header>
+          <h1>Hello, Ashley !</h1>
+          <p>Ready to study hard today?</p>
+        </header>
+
+        <section class="panels">
+          <div class="panel performance">
+            <h2>Performance</h2>
+            <div class="performance-box">
+              <div class="performance-header">
+                <span class="legend">
+                  <span class="dot"></span> Your Progress in
+                </span>
+                <select class="monthSelect">
+                  <option value="march">March</option>
+                  <option value="april">April</option>
+                  <option value="may">May</option>
+                </select>
+              </div>
+              <canvas class="gaugeCanvas"></canvas>
+              <p class="grade-text">Your Grade: <strong class="gradeValue">8.966</strong></p>
+            </div>
+          </div>
+
+          <div class="panel upcoming">
+            <h2>Upcoming Lesson</h2>
+
+            <div class="lesson-card">
+              <div class="icon-box">🎓</div>
+              <div class="lesson-info">
+                <div class="title">UI/UX Design</div>
+                <div class="details">5:30pm &nbsp;&nbsp; Eric Zakirov</div>
+              </div>
+              <a href="#" class="join-btn primary">Join</a>
+            </div>
+
+            <div class="lesson-card">
+              <div class="icon-box">✔️</div>
+              <div class="lesson-info">
+                <div class="title">Python Fundamentals</div>
+                <div class="details">9:30pm &nbsp;&nbsp; Aziza Koles</div>
+              </div>
+              <a href="#" class="join-btn muted">Join</a>
+            </div>
+
+            <div class="lesson-card">
+              <div class="icon-box">✔️</div>
+              <div class="lesson-info">
+                <div class="title">HTML CSS</div>
+                <div class="details">5:30pm &nbsp;&nbsp; Temir Aganov</div>
+              </div>
+              <a href="#" class="join-btn muted">Join</a>
+            </div>
+          </div>
+
+          <!-- To Do -->
+          <div class="panel todo">
+            <h2>To do List</h2>
+            <ul class="todoList">
+              <li>
+                <span class="checkbox"></span>
+                <div class="task-content">
+                  <div contenteditable="true" class="task-name">Java Script</div>
+                  <input type="date" class="task-date" />
+                </div>
+              </li>
+              <li>
+                <span class="checkbox"></span>
+                <div class="task-content">
+                  <div contenteditable="true" class="task-name">Backend Development</div>
+                  <input type="date" class="task-date" />
+                </div>
+              </li>
+              <li class="completed">
+                <span class="checkbox checked"></span>
+                <div class="task-content">
+                  <div contenteditable="true" class="task-name">Introduction to UI</div>
+                  <input type="date" class="task-date" />
+                </div>
+              </li>
+              <li class="completed">
+                <span class="checkbox checked"></span>
+                <div class="task-content">
+                  <div contenteditable="true" class="task-name">Basics of Figma</div>
+                  <input type="date" class="task-date" />
+                </div>
+              </li>
+            </ul>
+            <button class="addTaskBtn">+ New Task</button>
+          </div>
+
+          <!-- Course Panel -->
+          <div class="course-panel">
+            <div class="panel-header">
+              <h2>My courses</h2>
+              <div class="search-btn">🔍</div>
+            </div>
+
+            <div class="course-item active">
+              <div class="icon">🎨</div>
+              <div class="course-details">
+                <div class="course-title">Java Script</div>
+                <div class="course-meta">
+                  <span>⏱ 10w</span>
+                  <span>📘 15 Lessons</span>
+                  <span>✅ Assignments</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="course-item" id="course-visual">
+              <div class="icon">🖌</div>
+              <div class="course-details">
+                <div class="course-title inactive">Backend Development</div>
+                <div class="course-meta">
+                  <span>⏱ 14w </span>
+                  <span>📘 33 Lessons</span>
+                  <span>✅ Assignments</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Calendar -->
+          <div class="calendar-container">
+            <div class="calendar-header">
+              <button class="prevMonth">&lt;</button>
+              <div class="monthYear">
+                <h2>June 2024</h2>
+              </div>
+              <button class="nextMonth">&gt;</button>
+            </div>
+            <div class="calendar-days">
+              <div>Sun</div>
+              <div>Mon</div>
+              <div>Tue</div>
+              <div>Wed</div>
+              <div>Thu</div>
+              <div>Fri</div>
+              <div>Sat</div>
+            </div>
+            <div class="calendar-dates" id="calendarDates"></div>
+          </div>
+        </section>
+      </div>
+    </div>
+    <script src="js/student-dashboard.js"></script>
+  </body>
+</html>

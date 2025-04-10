@@ -38,7 +38,7 @@ function drawGauge(score) {
   // Draw performance arc
   ctx.beginPath();
   ctx.arc(centerX, centerY, radius, Math.PI, Math.PI + angle, false);
-  ctx.strokeStyle = '#C60000';
+  ctx.strokeStyle = '#A7BDD8';
   ctx.lineWidth = 15;
   ctx.stroke();
 
@@ -51,14 +51,14 @@ function drawGauge(score) {
   ctx.beginPath();
   ctx.moveTo(centerX, centerY);
   ctx.lineTo(pointerX, pointerY);
-  ctx.strokeStyle = '#C60000';
+  ctx.strokeStyle = '#A7BDD8';
   ctx.lineWidth = 4;
   ctx.stroke();
 
   // Inner circle
   ctx.beginPath();
   ctx.arc(centerX, centerY, 8, 0, Math.PI * 2);
-  ctx.fillStyle = '#C60000';
+  ctx.fillStyle = '#A7BDD8';
   ctx.fill();
 }
 
