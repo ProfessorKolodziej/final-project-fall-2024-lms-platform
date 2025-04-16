@@ -1,0 +1,154 @@
+
+body {
+  margin: 0;
+  font-family: 'poppins', sans-serif;
+  background-color: #ffffff;
+}
+
+.lessonBalance-page {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar {
+  width: 254px;
+  background-color: #F9F9F9;
+  border-right: 1.3px solid #E4E4E4;
+  padding: 30px 20px;
+}
+
+.sidebar .logo {
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 40px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar li {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  font-size: 15.5px;
+  font-weight: 500;
+  color: #727272;
+  cursor: pointer;
+}
+
+.sidebar li.active {
+  background-color: #651c1a;
+  color: white;
+}
+
+.sidebar nav ul li a {
+  display: flex;
+  align-items: center;
+  width: 100%;          
+  height: 100%;        
+  text-decoration: none; 
+  color: inherit;      
+}  
+
+.sidebar li .icon {
+  margin-right: 12px;
+}
+  
+
+
+  .main {
+    flex: 1;
+    padding: 40px;
+    position: relative;
+  }
+
+  .main {
+    flex: 1;
+    padding: 40px;
+    position: relative;
+  }
+  h1 {
+    font-size: 26.71px;
+    font-weight: 500;
+    color: #121212;
+    margin-bottom: 30px;
+  }
+  .summary-box {
+    position: absolute;
+    top: 50px;
+    left: 750px;
+  }
+  .summary-item {
+    background: rgba(198, 0, 0, 0.06);
+    border-radius: 6px;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  .summary-item p {
+    margin: 0;
+    font-size: 13.28px;
+  }
+  .summary-item strong {
+    font-size: 27.66px;
+    font-weight: 600;
+    display: block;
+  }
+  .refill-btn {
+    background: #651c1a;
+    color: white;
+    font-size: 8.85px;
+    font-weight: 600;
+    padding: 5px 20px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    margin-left:90px;
+  }
+
+  .lesson-table {
+    max-width: 800px;
+    margin-top:150px;
+    background: white;
+    box-shadow: 0px 7px 11px rgba(0,0,0,0.09);
+    border-radius: 15px;
+    border: 2px solid #e4e4e4;
+    padding: 30px;
+  }
+
+  .table-header,
+  .table-row {
+    display: grid;
+    grid-template-columns: 3fr 2fr 2fr 2fr;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 0;
+  }
+  .table-header div {
+    font-size: 19.78px;
+    font-weight: 500;
+    color: #121212;
+  }
+  .table-row div {
+    font-size: 14.9px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    letter-spacing: 0.34px;
+  }
+  .table-row .date,
+  .table-row .status,
+  .table-row .balance {
+    font-family: 'poppins', sans-serif;
+    font-size: 13.75px;
+    color: #121212;
+    opacity: 0.7;
+  }
+  .table-row .date.red {
+    color: #651c1a;
+    opacity: 1;
+  }

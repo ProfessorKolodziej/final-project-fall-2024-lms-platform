@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lesson Balance</title>
+  <link rel="stylesheet" href="../login frontend/lesson-balance.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="lessonBalance-page">
+      <aside class="sidebar">
+        <div class="logo"><span class="logo-icon">🔺</span> Ncode</div>
+        <nav>
+          <ul>
+            <li><a href="student-dashboard.html"><span class="icon">📊</span> Dashboard</a></li>
+            <li><a href="schedule.html"><span class="icon">📅</span> Schedule</a></li>
+            <li><a href="homework.html"><span class="icon">📝</span> Homework</a></li>
+            <li><a href="cue-cards.html"><span class="icon">🃏</span> Cue Cards</a></li>
+            <li><a href="networking-events.html"><span class="icon">👥</span> Networking</a></li>
+            <li><a href="practise-set.html"><span class="icon">🎓</span> Practice Set</a></li>
+            <li><a href="mediaEntertainment.html"><span class="icon">🎬</span> Media & Entertainment</a></li>
+            <li class="active"><a href="lesson-balance.html"><span class="icon">⚙️</span> Lesson Balance</a></li>
+          </ul>
+        </nav>
+      </aside>      
+          <div class="main">
+            <h1>Lesson Balance</h1>
+            <div class="summary-box">
+              <div class="summary-item">
+                <p>Conducted lessons</p>
+                <strong id="conducted-count">11 lessons</strong>
+              </div>
+              <div class="summary-item">
+                <p>Your balance</p>
+                <strong id="balance-count">8 lessons</strong>
+              </div>
+              <button class="refill-btn" id="refill-btn">Refill</button>
+            </div>
+            <div class="lesson-table">
+              <div class="table-header">
+                <div>Class</div>
+                <div>Date</div>
+                <div>Status</div>
+                <div>Balance</div>
+              </div>
+              <div class="table-row">
+                <div>Auto-layout</div>
+                <div class="date">March 30</div>
+                <div class="status">Conducted</div>
+                <div class="balance">Paid</div>
+              </div>
+              <div class="table-row">
+                <div>Design_Tips</div>
+                <div class="date red">April 3rd</div>
+                <div class="status">Canceled</div>
+                <div class="balance">Paid</div>
+              </div>
+              <div class="table-row">
+                <div>Basics_Of_UX</div>
+                <div class="date red">April 3rd</div>
+                <div class="status"></div>
+                <div class="balance"></div>
+              </div>
+              <div class="table-row">
+                <div>Python Lesson 5</div>
+                <div class="date">March 30</div>
+                <div class="status"></div>
+                <div class="balance"></div>
+              </div>
+              <div class="table-row">
+                <div>HTML Lesson 3</div>
+                <div class="date">March 30</div>
+                <div class="status"></div>
+                <div class="balance"></div>
+              </div>
+              <div class="table-row">
+                <div>Java Script Lesson 8</div>
+                <div class="date">March 30</div>
+                <div class="status"></div>
+                <div class="balance"></div>
+              </div>
+            </div>
+          </div>
+          <script src="../login frontend/lesson-balance.js"></script>
+        </body>
+        </html>

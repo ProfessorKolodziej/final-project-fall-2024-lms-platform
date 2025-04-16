@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Homework Page</title>
+  <link rel="stylesheet" href="../login frontend/cue-cards.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="cueCards-page">
+      <aside class="sidebar">
+        <div class="logo"><span class="logo-icon">🔺</span> Ncode</div>
+        <nav>
+          <ul>
+            <li><a href="student-dashboard.html"><span class="icon">📊</span> Dashboard</a></li>
+            <li><a href="schedule.html"><span class="icon">📅</span> Schedule</a></li>
+            <li><a href="homework.html"><span class="icon">📝</span> Homework</a></li>
+            <li class="active"><a href="cue-cards.html"><span class="icon">🃏</span> Cue Cards</a></li>
+            <li><a href="networking-events.html"><span class="icon">👥</span> Networking</a></li>
+            <li><a href="practise-set.html"><span class="icon">🎓</span> Practice Set</a></li>
+            <li><a href="mediaEntertainment.html"><span class="icon">🎬</span> Media & Entertainment</a></li>
+            <li><a href="lesson-balance.html"><span class="icon">⚙️</span> Lesson Balance</a></li>
+          </ul>
+        </nav>
+      </aside>
+      
+        
+ <!-- Main Area -->
+ <div class="main">
+    <div class="header">
+      <h1>Cue Cards</h1>
+      <div class="controls">
+        <select id="category-select">
+          <option value="python">Python</option>
+          <option value="marketing">Marketing</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Card Viewer -->
+<div class="card-viewer">
+  <div class="card">
+    <img src="https://placehold.co/303x207" alt="Cue Card" />
+  </div>
+
+  <div class="side-buttons">
+    <button id="next-card" class="nav-btn">Review Later</button>
+    <button id="prev-card" class="nav-btn">Understood</button>
+  </div>
+</div>
+
+
+   <!-- Flip Button -->
+      <button id="flip-button">FLIP</button>
+
+      <!-- Stack Previews -->
+      <div class="card-stacks">
+        <div class="stack">
+          <div id="learned-stack" class="stack-container"></div>
+          <p class="stack-label">Learned</p>
+        </div>
+        <div class="stack">
+          <div id="tolearn-stack" class="stack-container"></div>
+          <p class="stack-label">To Learn</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<script src="../login frontend/cue-cards.js"></script>
+</body>
+</html>
