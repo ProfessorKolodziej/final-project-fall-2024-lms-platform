@@ -2,15 +2,15 @@
 const cards = [
     {
       category: "python",
-      front: "https://placehold.co/303x207?text=Python+Card+1",
-      back: "https://placehold.co/303x207?text=Answer+1",
+      front: "images/q1.png",
+      back: "images/1.png",
       learned: false,
       reviewLater: false
     },
     {
       category: "python",
-      front: "https://placehold.co/303x207?text=Python+Card+2",
-      back: "https://placehold.co/303x207?text=Answer+2",
+      front: "images/q2.png",
+      back: "images/2.png",
       learned: false,
       reviewLater: false
     },
@@ -23,22 +23,22 @@ const cards = [
     },
     {
       category: "python",
-      front: "https://placehold.co/303x207?text=What+is+a+variable%3F",
-      back: "A named location used to store data in memory.",
+      front: "images/q3.png",
+      back: "images/3.png",
       learned: false,
       reviewLater: false
     },
     {
       category: "python",
-      front: "https://placehold.co/303x207?text=What+is+a+list%3F",
-      back: "A collection of items ordered and changeable.",
+      front: "images/q4.png",
+      back: "images/4.png",
       learned: false,
       reviewLater: false
     },
     {
       category: "python",
-      front: "https://placehold.co/303x207?text=What+is+%27if%27+used+for%3F",
-      back: "To make decisions in code based on conditions.",
+      front: "images/q5.png",
+      back: "images/5.png",
       learned: false,
       reviewLater: false
     },
@@ -188,19 +188,45 @@ const cards = [
   }
   
   function showLearnedTable() {
-    const learned = cards.filter(card => card.learned);
-    if (learned.length === 0) return;
-  
     const tableHTML = `
       <div class="modal-overlay">
         <div class="modal">
-          <h2>Learned Cards</h2>
+          <h2>Learned Python Cards</h2>
           <table>
             <thead>
-              <tr><th>Question</th><th>Answer</th></tr>
+              <tr>
+                <th>Question</th>
+                <th>Answer</th>
+              </tr>
             </thead>
             <tbody>
-              ${learned.map(c => `<tr><td>${decodeURIComponent(c.front.split("=")[1].replaceAll('+', ' '))}</td><td>${c.back}</td></tr>`).join('')}
+              <tr>
+                <td>What is a Python list?</td>
+                <td>A list is a collection of items in a defined order, written with square brackets <code>[]</code>.</td>
+              </tr>
+              <tr>
+                <td>How do you define a function in Python?</td>
+                <td>
+                  Use the <code>def</code> keyword:
+                  <pre><code>def greet():
+      print("Hello")</code></pre>
+                </td>
+              </tr>
+              <tr>
+                <td>What does <code>len()</code> do?</td>
+                <td>It returns the number of items in an object (like a list, string, etc.).</td>
+              </tr>
+              <tr>
+                <td>How do you write a <code>for</code> loop?</td>
+                <td>
+                  <pre><code>for i in range(5):
+      print(i)</code></pre>
+                </td>
+              </tr>
+              <tr>
+                <td>What's the difference between <code>==</code> and <code>=</code> in Python?</td>
+                <td><code>=</code> is for assignment, <code>==</code> is for comparison.</td>
+              </tr>
             </tbody>
           </table>
           <button id="close-modal">Close</button>
@@ -208,12 +234,13 @@ const cards = [
       </div>
     `;
   
-    document.body.insertAdjacentHTML('beforeend', tableHTML);
+    document.body.insertAdjacentHTML("beforeend", tableHTML);
   
     document.getElementById("close-modal").onclick = () => {
       document.querySelector(".modal-overlay").remove();
     };
   }
+  
   
   nextBtn.textContent = "Review Later";
   prevBtn.textContent = "Understood";

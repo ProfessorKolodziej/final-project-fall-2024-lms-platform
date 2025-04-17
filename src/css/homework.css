@@ -120,3 +120,61 @@ body {
     color: #651c1a;
   }
   
+  /* Tablets (768px and below) */
+@media (max-width: 768px) {
+  .homework-page {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1.3px solid #E4E4E4;
+  }
+
+  .container {
+    margin: 20px auto;
+    padding: 15px;
+    max-width: 95%;
+  }
+
+  h1 {
+    font-size: 22px;
+  }
+
+  .course-name {
+    font-size: 16px;
+  }
+
+  .description {
+    font-size: 13px;
+  }
+
+  .due-date {
+    font-size: 12px;
+  }
+}
+
+/* Small phones (480px and below) */
+@media (max-width: 480px) {
+  .sidebar .logo {
+    font-size: 20px;
+  }
+
+  .sidebar li {
+    font-size: 13px;
+    padding: 8px 10px;
+  }
+
+  .homework-item {
+    padding: 12px;
+  }
+
+  .progress-bar-bg {
+    height: 5px;
+  }
+
+  .progress-bar-fill {
+    height: 5px;
+  }
+}
