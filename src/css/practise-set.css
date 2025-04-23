@@ -1,4 +1,6 @@
-
+/* --------------------------------------
+   COMMON STYLES (Desktop-first)
+-------------------------------------- */
 body {
   margin: 0;
   font-family: 'poppins', sans-serif;
@@ -10,11 +12,38 @@ body {
   height: 100vh;
 }
 
+.hamburger {
+  display: none;
+  font-size: 24px;
+  background: none;
+  border: none;
+  padding: 15px;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 1001;
+}
+
 .sidebar {
   width: 254px;
   background-color: #F9F9F9;
   border-right: 1.3px solid #E4E4E4;
   padding: 30px 20px;
+}
+
+.sidebar-toggle {
+  position: absolute;
+  top: 20px;
+  left: 10px;
+  font-size: 20px;
+  padding: 8px;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  z-index: 1001;
+  cursor: pointer;
+  display: none;
 }
 
 .sidebar .logo {
@@ -49,153 +78,156 @@ body {
 .sidebar nav ul li a {
   display: flex;
   align-items: center;
-  width: 100%;          
-  height: 100%;        
-  text-decoration: none; 
-  color: inherit;      
-}  
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: inherit;
+}
 
 .sidebar li .icon {
   margin-right: 12px;
 }
 
-  .container {
-    padding: 2rem;
-    text-align: center;
-  }
-  
-  .title {
-    font-size: 24px;
-    font-weight: 600;
-    margin-bottom: 1.5rem;
-  }
-  
-  .grid {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    align-items: center;
-  }
-  .row {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-  }
-  
-  
-  .card {
-    width: 180px;
-    border: 1px solid #B5B5C3;
-    border-radius: 8px;
-    overflow: hidden;
-    background: white;
-    box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
-    position: relative;
-  }
-  
-  .card img {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-bottom: 1px solid #ddd;
-  }
-  
-  .tag {
-    font-size: 10px;
-    background-color: #EFEFF2;
-    padding: 4px 8px;
-    border-radius: 20px;
-    display: inline-block;
-    margin: 10px 0 5px;
-  }
-  
-  .title-text {
-    font-size: 14px;
-    font-weight: 600;
-    padding: 0 10px;
-  }
-  
-  .difficulty {
-    font-size: 11px;
-    font-weight: 700;
-    margin: 5px 0;
-  }
-  
-  .difficulty.easy {
-    color: #5D7D2F;
-  }
-  
-  .difficulty.difficult {
-    color: #651c1a;
-  }
-  
-  .button {
-    margin: 10px auto 15px;
-    padding: 5px 12px;
-    background-color: #651c1a;
-    color: #fff;
-    font-size: 11px;
-    font-weight: 600;
-    border: none;
-    border-radius: 20px;
-    cursor: pointer;
-    box-shadow: 2px 2px 0 #3D3D3D;
-    outline: 1px solid black;
-    display: block;
-  }
-  
-  .button:hover {
-    background-color: #651c1a;
-  }
-  
-  .backpack {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 50px;
-    height: 50px;
-    background: #651c1a;
-    border-radius: 50%;
-    color: white;
-    font-size: 18px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 0 10px rgba(0,0,0,0.2);
-  }
+.container {
+  padding: 2rem;
+  text-align: center;
+}
 
-  /* Tablets (768px and below) */
-@media (max-width: 768px) {
-  .practise-page {
-    flex-direction: column;
+.title {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.grid {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.row {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+}
+
+.card {
+  width: 180px;
+  border: 1px solid #B5B5C3;
+  border-radius: 8px;
+  overflow: hidden;
+  background: white;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.05);
+  position: relative;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-bottom: 1px solid #ddd;
+}
+
+.tag {
+  font-size: 10px;
+  background-color: #EFEFF2;
+  padding: 4px 8px;
+  border-radius: 20px;
+  display: inline-block;
+  margin: 10px 0 5px;
+}
+
+.title-text {
+  font-size: 14px;
+  font-weight: 600;
+  padding: 0 10px;
+}
+
+.difficulty {
+  font-size: 11px;
+  font-weight: 700;
+  margin: 5px 0;
+}
+
+.difficulty.easy {
+  color: #5D7D2F;
+}
+
+.difficulty.difficult {
+  color: #651c1a;
+}
+
+.button {
+  margin: 10px auto 15px;
+  padding: 5px 12px;
+  background-color: #651c1a;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 600;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  box-shadow: 2px 2px 0 #3D3D3D;
+  outline: 1px solid black;
+  display: block;
+}
+
+.button:hover {
+  background-color: #651c1a;
+}
+
+.backpack {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background: #651c1a;
+  border-radius: 50%;
+  color: white;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+/* --------------------------------------
+   MEDIA QUERIES
+-------------------------------------- */
+
+/* Mobile (≤ 480px) */
+@media (max-width: 480px) {
+
+  .sidebar-toggle {
+    display: block;
+    z-index: 1001;
   }
 
   .sidebar {
-    width: 100%;
-    border-right: none;
-    border-bottom: 1.3px solid #E4E4E4;
+    position: fixed;
+    top: 0;
+    left: -100%;
+    height: 100%;
+    width: 250px;
+    background-color: #F9F9F9;
+    transition: left 0.3s ease;
+    z-index: 1000;
+    padding-top: 60px;
   }
 
-  .container {
-    padding: 1.5rem;
+  .sidebar.open {
+    left: 0;
   }
 
-  .title {
-    font-size: 20px;
+  .overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.3);
+    z-index: 999;
   }
-
-  .row {
-    flex-wrap: wrap;
-    gap: 16px;
-  }
-
-  .card {
-    width: 45%;
-  }
-}
-
-/* Small phones (480px and below) */
-@media (max-width: 480px) {
+  
   .sidebar .logo {
     font-size: 20px;
   }
@@ -236,4 +268,39 @@ body {
     height: 44px;
     font-size: 16px;
   }
+}
+
+/* Tablet (≤ 768px) */
+@media (max-width: 768px) {
+  .practise-page {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1.3px solid #E4E4E4;
+  }
+
+  .container {
+    padding: 1.5rem;
+  }
+
+  .title {
+    font-size: 20px;
+  }
+
+  .row {
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .card {
+    width: 45%;
+  }
+}
+
+/* Desktop (≥ 1024px) — optional overrides */
+@media (min-width: 1024px) {
+  /* Add desktop-specific tweaks here if needed */
 }
