@@ -100,6 +100,12 @@ body {
 }
 
 .events-grid {
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+}
+
+
+.events-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
@@ -187,7 +193,7 @@ body {
 -------------------------------------- */
 
 /* Mobile (≤ 480px) */
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   .sidebar .logo {
     font-size: 20px;
   }
@@ -225,8 +231,17 @@ body {
   }
 
   .events-grid {
-    grid-template-columns: 1fr;
+    display: block;
+    overflow-y: auto;
+    height: calc(100vh - 120px); /* adjust depending on header/footer */
+    padding-right: 10px;
   }
+  .card {
+    width: 100%;
+    max-width: 360px;
+    margin: 0 auto 20px;
+  }
+  
 
   .card-title {
     font-size: 10px;
@@ -249,7 +264,7 @@ body {
 }
 
 /* Tablet (≤ 768px) */
-@media (max-width: 768px) {
+@media (min-width: 768px) and (max-width: 1023px) {
   .networking-page {
     flex-direction: column;
   }

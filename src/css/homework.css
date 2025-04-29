@@ -153,8 +153,8 @@ h1 {
    MEDIA QUERIES
 -------------------------------------- */
 
-/* Mobile (≤ 480px) */
-@media (max-width: 480px) {
+/* Mobile (≤ 768px) */
+@media (min-width: 768px) {
   .sidebar .logo {
     font-size: 20px;
   }
@@ -191,22 +191,10 @@ h1 {
     font-size: 13px;
     padding: 8px 10px;
   }
-
-  .homework-item {
-    padding: 12px;
-  }
-
-  .progress-bar-bg {
-    height: 5px;
-  }
-
-  .progress-bar-fill {
-    height: 5px;
-  }
 }
 
 /* Tablet (≤ 768px) */
-@media (max-width: 768px) {
+@media (min-width: 769px) and (max-width:10023px) {
   .homework-page {
     flex-direction: column;
   }
@@ -221,22 +209,6 @@ h1 {
     margin: 20px auto;
     padding: 15px;
     max-width: 95%;
-  }
-
-  h1 {
-    font-size: 22px;
-  }
-
-  .course-name {
-    font-size: 16px;
-  }
-
-  .description {
-    font-size: 13px;
-  }
-
-  .due-date {
-    font-size: 12px;
   }
 }
 

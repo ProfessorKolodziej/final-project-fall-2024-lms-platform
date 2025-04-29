@@ -189,7 +189,7 @@ h1 {
 -------------------------------------- */
 
 /* Mobile (≤ 480px) */
-@media (max-width: 480px) {
+@media (max-width: 768px) {
   .sidebar .logo {
     font-size: 20px;
   }
@@ -226,27 +226,10 @@ h1 {
     padding: 8px 10px;
   }
 
-  .summary-item strong {
-    font-size: 20px;
-  }
-
-  .summary-item p {
-    font-size: 12px;
-  }
-
-  .table-header div,
-  .table-row div {
-    font-size: 13px;
-  }
-
-  .refill-btn {
-    font-size: 10px;
-    padding: 6px 16px;
-  }
 }
 
 /* Tablet (≤ 768px) */
-@media (max-width: 768px) {
+@media (min-width: 769px) and (max-width:1023px) {
   .lessonBalance-page {
     flex-direction: column;
   }
@@ -257,46 +240,6 @@ h1 {
     border-bottom: 1.3px solid #E4E4E4;
   }
 
-  .main {
-    padding: 20px;
-  }
-
-  h1 {
-    font-size: 22px;
-    text-align: center;
-  }
-
-  .summary-box {
-    position: static;
-    margin-bottom: 30px;
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-  }
-
-  .refill-btn {
-    margin-left: 0;
-    display: block;
-    margin: 10px auto 0;
-  }
-
-  .lesson-table {
-    margin-top: 20px;
-    padding: 20px;
-    width: 100%;
-  }
-
-  .table-header,
-  .table-row {
-    grid-template-columns: 1fr 1fr;
-    gap: 8px;
-  }
-
-  .table-header div:nth-child(n+3),
-  .table-row div:nth-child(n+3) {
-    display: none;
-  }
 }
 
 /* Desktop (≥ 1024px) — optional overrides */

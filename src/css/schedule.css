@@ -122,7 +122,14 @@ body {
   cursor: pointer;
 }
 
-/* Days Row */
+/* calendar */
+
+@keyframes pulse {
+  0% { transform: translateY(-50%) translateX(0); opacity: 1; }
+  50% { transform: translateY(-50%) translateX(10px); opacity: 0.6; }
+  100% { transform: translateY(-50%) translateX(0); opacity: 1; }
+}
+
 .days-container {
   display: flex;
   width: 1083.719px;
@@ -142,6 +149,7 @@ body {
 }
 
 /* Calendar Layout */
+
 .calendar-container {
   display: flex;
 }
@@ -194,11 +202,10 @@ body {
   background-image:
     linear-gradient(to right, #ccc 1px, transparent 1px),
     linear-gradient(to bottom, #ccc 1px, transparent 1px);
-  background-size: calc(100% / 7) 33px;
+  background-size: calc(100% / 7) 32px;
 }
 
 .lesson {
-  z-index: 1;
   position: relative;
   background-color: #fff9c4;
   box-sizing: border-box;
@@ -293,10 +300,6 @@ button.change-btn {
 
 /* Mobile (≤ 480px) */
 @media (max-width: 480px) {
-  .schedule-page {
-    flex-direction: column;
-    height: auto;
-  }
 
   .sidebar-toggle {
     display: block;
@@ -326,46 +329,25 @@ button.change-btn {
     z-index: 999;
   }
 
-  .calendar-top-bar {
-    flex-direction: column;
-    gap: 16px;
-    padding: 24px 16px;
-    align-items: flex-start;
+  .scroll-hint {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    background: rgba(255,255,255,0.8);
+    padding: 8px 10px;
+    border-radius: 50px;
+    font-size: 12px;
+    color: #651c1a;
+    animation: pulse 1.5s infinite;
+    z-index: 10;
   }
-
-  .calendar-week-selector {
-    width: 100%;
-    text-align: left;
-  }
-
-  .days-container {
-    flex-direction: column;
-    width: 100%;
-    margin-left: 0;
-  }
-
-  .calendar-container {
-    flex-direction: column;
-  }
-
-  .time-container {
-    display: none;
-  }
-
-  .calendar-grid {
-    grid-template-columns: 1fr;
-    width: 100%;
-    height: auto;
-    overflow-x: auto;
-  }
+  
 }
 
-/* Tablet (768px to 1023px) */
-@media (min-width: 768px) and (max-width: 1023px) {
-  .schedule-page {
-    flex-direction: column;
-    height: auto;
-  }
+/* Tablet (481px to 1023px) */
+@media (min-width: 481px) and (max-width: 1023px) {
+
 
   .sidebar {
     width: 100%;
@@ -373,50 +355,26 @@ button.change-btn {
     border-right: none;
     border-bottom: 1.3px solid #E4E4E4;
   }
-
-  .calendar-top-bar {
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 32px 20px;
-  }
-
-  .calendar-week-selector {
-    width: auto;
-  }
-
-  .days-container {
-    width: 100%;
-    margin-left: 0;
-  }
-
-  .calendar-container {
-    flex-direction: column;
-  }
-
-  .calendar-grid {
-    width: 100%;
-    overflow-x: auto;
-  }
-
-  .time-container {
-    margin-left: 0;
-    width: 100%;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    overflow-x: auto;
-  }
-
-  .time-container div {
-    writing-mode: horizontal-tb;
-    transform: none;
-    width: auto;
-    height: auto;
-    padding: 6px 10px;
-    font-size: 10px;
+  
+  .scroll-hint {
+    position: absolute;
+    top: 30%;
+    right: 20px;
+    transform: translateY(-50%);
+    background: rgba(255,255,255,0.8);
+    padding: 8px 10px;
+    border-radius: 50px;
+    font-size: 16px;
+    color: #651c1a;
+    animation: pulse 1.5s infinite;
+    z-index: 10;
   }
 }
 
-/* Desktop (≥ 1024px) — optional overrides */
+/* Desktop (≥ 1024x) — optional overrides */
 @media (min-width: 1024px) {
   /* Add desktop-specific overrides here if needed */
+  .scroll-hint {
+    display: none;
+  }
 }

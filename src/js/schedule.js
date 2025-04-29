@@ -211,3 +211,15 @@ overlay.addEventListener("click", () => {
     document.body.removeChild(overlay);
   }
 });
+
+
+
+//scrolable hint animation in mobile 
+  const calendarContainer = document.querySelector(".calendar-container");
+  const scrollHint = document.querySelector(".scroll-hint");
+
+  if (calendarContainer && scrollHint) {
+    calendarContainer.addEventListener("scroll", function () {
+      scrollHint.style.display = "none";
+    });
+  }
