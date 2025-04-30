@@ -154,8 +154,8 @@ h1 {
 -------------------------------------- */
 
 /* Mobile (≤ 768px) */
-@media (min-width: 768px) {
-  .sidebar .logo {
+@media (min-width: 360px) and (max-width:768px) {
+  sidebar .logo {
     font-size: 20px;
   }
 
@@ -186,15 +186,15 @@ h1 {
     background: rgba(0,0,0,0.3);
     z-index: 999;
   }
-  
   .sidebar li {
     font-size: 13px;
     padding: 8px 10px;
   }
+
 }
 
 /* Tablet (≤ 768px) */
-@media (min-width: 769px) and (max-width:10023px) {
+@media (min-width: 769px) and (max-width:1023px) {
   .homework-page {
     flex-direction: column;
   }
@@ -203,12 +203,6 @@ h1 {
     width: 100%;
     border-right: none;
     border-bottom: 1.3px solid #E4E4E4;
-  }
-
-  .container {
-    margin: 20px auto;
-    padding: 15px;
-    max-width: 95%;
   }
 }
 

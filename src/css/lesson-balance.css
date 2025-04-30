@@ -129,7 +129,7 @@ h1 {
 .refill-btn {
   background: #651c1a;
   color: white;
-  font-size: 8.85px;
+  font-size: 20px;
   font-weight: 600;
   padding: 5px 20px;
   border-radius: 10px;
@@ -140,7 +140,7 @@ h1 {
 
 .lesson-table {
   max-width: 800px;
-  margin-top: 150px;
+  margin-top: 200px;
   background: white;
   box-shadow: 0px 7px 11px rgba(0, 0, 0, 0.09);
   border-radius: 15px;
@@ -184,16 +184,9 @@ h1 {
   opacity: 1;
 }
 
-/* --------------------------------------
-   MEDIA QUERIES
--------------------------------------- */
-
 /* Mobile (≤ 480px) */
-@media (max-width: 768px) {
-  .sidebar .logo {
-    font-size: 20px;
-  }
-
+@media (max-width: 480px) {
+  
   .sidebar-toggle {
     display: block;
     z-index: 1001;
@@ -221,25 +214,70 @@ h1 {
     background: rgba(0,0,0,0.3);
     z-index: 999;
   }
-  .sidebar li {
-    font-size: 13px;
-    padding: 8px 10px;
+  
+   .main {
+    padding-left:30px;
   }
 
+  .summary-box {
+    position: static;
+  }
+
+  .refill-btn {
+    margin: 10px 0 0 auto;
+    font-size: 16px;
+    padding: 8px 20px;
+  }
+
+  .lesson-table {
+    margin-top: 50px;
+    padding: 15px;
+  }
+  
+  .lesson-table .table-header div,
+  .lesson-table .table-row div {
+    font-size: 12px; /* or any size you prefer */
+  }
+  
 }
 
-/* Tablet (≤ 768px) */
-@media (min-width: 769px) and (max-width:1023px) {
-  .lessonBalance-page {
-    flex-direction: column;
+
+/* Tablet (481px – 1023px) */
+@media (min-width: 481px) and (max-width: 1023px) {
+
+  .main {
+    padding: 30px;
   }
 
-  .sidebar {
-    width: 100%;
-    border-right: none;
-    border-bottom: 1.3px solid #E4E4E4;
+  .summary-box {
+    position: static;
   }
 
+  .refill-btn {
+    margin: 10px 0 0 auto;
+    font-size: 16px;
+    padding: 8px 20px;
+  }
+
+  .lesson-table {
+    margin-top: 50px;
+    padding: 15px;
+    font-size: 12px;
+  }
+
+  .table-header,
+  .table-row {
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    gap: 20px;
+  }
+
+  .table-header div {
+    font-size: 17px;
+  }
+
+  .table-row div {
+   font-size: 13px;
+  }
 }
 
 /* Desktop (≥ 1024px) — optional overrides */
