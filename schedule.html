@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Schedule | Ncode</title>
+  <link rel="stylesheet" href="css/schedule.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+</head>
+<body>
+     <div class="schedule-page">
+      <button id="sidebarToggle" class="sidebar-toggle">⬅</button>
+      <aside class="sidebar" id="sidebar">
+        <div class="logo"><span class="logo-icon">🔺</span> Ncode</div>
+        <nav>
+          <ul>
+            <li><a href="student-dashboard.html"><span class="icon">📊</span> Dashboard</a></li>
+            <li class="active"><a href="schedule.html"><span class="icon">📅</span> Schedule</a></li>
+            <li><a href="homework.html"><span class="icon">📝</span> Homework</a></li>
+            <li><a href="cue-cards.html"><span class="icon">🃏</span> Cue Cards</a></li>
+            <li><a href="networking-events.html"><span class="icon">👥</span> Networking</a></li>
+            <li><a href="practise-set.html"><span class="icon">🎓</span> Practice Set</a></li>
+            <li><a href="mediaEntertainment.html"><span class="icon">🎬</span> Media & Entertainment</a></li>
+            <li><a href="lesson-balance.html"><span class="icon">⚙️</span> Lesson Balance</a></li>
+          </ul>
+        </nav>
+      </aside>
+      
+
+          <main>
+            <div class="calendar-top-bar">
+                <div class="calendar-year">2024-2025</div>
+              
+                <div class="calendar-week-selector">
+                  <button id="prevWeekBtn">←</button>
+                  <span id="weekLabel">March 30 – April 5</span>
+                  <button id="nextWeekBtn">→</button>
+                </div>
+              
+                <button class="add-event-btn">+ Add Event</button>
+              </div>
+              
+            <div class="scroll-hint">scroll -> </div>
+
+      
+            <div class="days-container" id="calendarDayHeaders">
+              <div class="day-column" data-day="30, Sun">30, Sun</div>
+              <div class="day-column" data-day="31, Mon">31, Mon</div>
+              <div class="day-column" data-day="1, Tue">1, Tue</div>
+              <div class="day-column" data-day="2, Wed">2, Wed</div>
+              <div class="day-column" data-day="3, Thu">3, Thu</div>
+              <div class="day-column" data-day="4, Fri">4, Fri</div>
+              <div class="day-column" data-day="5, Sat">5, Sat</div>
+            </div>
+      
+            <div class="calendar-container">
+              <div class="time-container">
+                <div>8:00</div>
+                <div>9:00</div>
+                <div>10:00</div>
+                <div>11:00</div>
+                <div>12:00</div>
+                <div>13:00</div>
+                <div>14:00</div>
+                <div>15:00</div>
+                <div>16:00</div>
+                <div>17:00</div>
+                <div>18:00</div>
+                <div>19:00</div>
+                <div>20:00</div>
+                <div>21:00</div>
+                <div>22:00</div>
+                <div>23:00</div>
+                <div>0:00</div>
+                <div>1:00</div>
+                <div>2:00</div>
+                <div>3:00</div>
+                <div>4:00</div>
+                <div>5:00</div>
+                <div>6:00</div>
+                <div>7:00</div>
+              </div>
+      
+              <div class="calendar-grid" id="calendarBody">
+                <!-- Lessons will be injected here via JS -->
+              </div>              
+            </div>
+          </main>
+
+          <div id="lessonModal" class="modal hidden">
+            <div class="modal-content">
+              <span class="close-btn">&times;</span>
+              <h2 id="modalTitle"></h2>
+              <p>Time:<span id="modalTime"></span></p>
+              <p>Instructor: <span id="modalInstructor"></span></p>
+              <p>Latest Topic: <span id="modalTopic"></span></p>
+              <p>Homework: <span id="modalHw"></span></p>
+              <button id="modalJoinBtn">Join</button>
+              <button id="modalChangeBtn">Change Time</button>
+            </div>
+          </div>
+          
+      </div>
+      <script src="js/schedule.js"></script>
+    </body>
+      </html>
+      
+    
+    
+    

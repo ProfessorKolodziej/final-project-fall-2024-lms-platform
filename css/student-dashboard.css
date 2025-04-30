@@ -1,0 +1,556 @@
+/* Common style */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f8f8f8;
+}
+
+.dashboard {
+  display: flex;
+  height: 100vh;
+}
+
+
+.hamburger {
+  display: none;
+  font-size: 24px;
+  background: none;
+  border: none;
+  padding: 15px;
+  cursor: pointer;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 1001;
+}
+
+.sidebar {
+  width: 254px;
+  background-color: #F9F9F9;
+  border-right: 1.3px solid #E4E4E4;
+  padding: 30px 20px;
+}
+
+.sidebar-toggle {
+  position: absolute;
+  top: 20px;
+  left: 10px;
+  font-size: 20px;
+  padding: 8px;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  z-index: 1001;
+  cursor: pointer;
+  display: none;
+}
+
+.sidebar .logo {
+  font-size: 26px;
+  font-weight: 600;
+  margin-bottom: 40px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar li {
+  display: flex;
+  align-items: center;
+  padding: 10px 15px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  font-size: 15.5px;
+  font-weight: 500;
+  color: #727272;
+  cursor: pointer;
+}
+
+.sidebar nav ul li a {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: inherit;
+}
+
+.sidebar li.active {
+  background-color: #651c1a;
+  color: white;
+}
+
+.sidebar li .icon {
+  padding: 0;
+  margin-right: 12px;
+  font-size: 15.5px;
+}
+
+.content {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+header h1 {
+  font-size: 40px;
+  font-weight: 700;
+  color: #211C37;
+  margin: 0;
+}
+
+header p {
+  font-size: 21px;
+  color: #85878D;
+  margin: 5px 0 30px;
+}
+
+.panels {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 24px;
+}
+
+.panel {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05);
+  padding: 20px;
+}
+
+.panel h2,
+.panel.todo h2 {
+  font-size: 23px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.gaugeCanvas {
+  width: 180px;
+  height: 100px;
+}
+
+.performance .gauge {
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.performance .gauge strong {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.lesson-card {
+  background: white;
+  box-shadow: 0px 0px 32px rgba(0, 0, 0, 0.07);
+  border-radius: 8px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.icon-box {
+  width: 29px;
+  height: 29px;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lesson-info {
+  flex-grow: 1;
+}
+
+.lesson-info .title {
+  font-size: 15px;
+  font-weight: 500;
+  color: #1C1D1D;
+}
+
+.lesson-info .details {
+  font-size: 14px;
+  color: #1C1D1D;
+  opacity: 0.8;
+  margin-top: 2px;
+}
+
+.join-btn {
+  padding: 4px 12px;
+  border-radius: 5px;
+  font-size: 13px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.join-btn.primary {
+  background: #651c1a;
+  color: white;
+}
+
+.join-btn.muted {
+  background: rgba(198, 0, 0, 0.06);
+  color: #651c1a;
+}
+
+.panel.todo {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.todoList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.todoList li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 10px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.todoList li:last-child {
+  border-bottom: none;
+}
+
+.checkbox {
+  width: 18px;
+  height: 18px;
+  border: 2px solid #651c1a;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-top: 4px;
+  display: inline-block;
+  position: relative;
+}
+
+.checkbox.checked::after {
+  content: '✔';
+  position: absolute;
+  top: -2px;
+  left: 2px;
+  font-size: 15px;
+  font-weight: bold;
+  color: #651c1a;
+}
+
+.task-content {
+  flex: 1;
+}
+
+.task-name {
+  font-size: 15px;
+  font-weight: 500;
+  color: #1C1D1D;
+}
+
+.task-date {
+  font-size: 14px;
+  color: #9CA3AF;
+  margin-top: 4px;
+  background: transparent;
+  outline: none;
+  border: none;
+  padding: 4px 0;
+  cursor: pointer;
+}
+
+.task-date.filled {
+  color: #4B5563;
+}
+
+.task-date::-webkit-calendar-picker-indicator {
+  filter: invert(30%);
+}
+
+.task-date[data-date]:not(:focus)::before {
+  content: attr(data-date);
+  display: block;
+}
+
+.completed .task-name {
+  text-decoration: line-through;
+  color: #4B5563;
+}
+
+.addTaskBtn {
+  margin-top: 12px;
+  padding: 8px 12px;
+  background-color: #651c1a;
+  color: white;
+  font-weight: 500;
+  font-size: 14px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.addTaskBtn:hover {
+  background-color: #651c1a;
+}
+
+.course-panel {
+  width: 637px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  padding: 20px;
+}
+
+.panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 500;
+  font-size: 17px;
+  color: #1C1D1D;
+  margin-bottom: 20px;
+}
+
+.course-item {
+  display: flex;
+  gap: 10px;
+  padding: 12px;
+  border-radius: 10px;
+  margin-bottom: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.06);
+  align-items: center;
+  transition: all 0.2s ease;
+}
+
+.course-item.active {
+  border: 1px solid #651c1a;
+  background: white;
+}
+
+.icon {
+  border-radius: 8px;
+  padding: 8px;
+  font-size: 30px;
+}
+
+.course-details {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.course-title {
+  font-size: 17px;
+  font-weight: 700;
+  color: #651c1a;
+}
+
+.course-title.inactive {
+  color: #1C1D1D;
+  font-weight: 400;
+}
+
+.course-meta {
+  display: flex;
+  gap: 20px;
+  font-size: 14px;
+  color: #1C1D1D;
+}
+
+.course-meta span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.search-btn {
+  background: rgba(28, 29, 29, 0.05);
+  border-radius: 50%;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.calendar-container {
+  height: 320px;
+  width: 280px;
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  margin-left: 350px;
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #651c1a;
+  font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.calendar-days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  text-align: center;
+  color: #AAAAAA;
+  font-size: 10px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+
+.calendar-dates {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+  height: 32px;
+  line-height: 32px;
+  text-align: center;
+  border-radius: 50%;
+  font-weight: 500;
+  color: #222;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.inactive {
+  color: #A5AAB5;
+}
+
+.active {
+  background-color: #651c1a;
+  color: white;
+}
+
+.highlighted {
+  color: #651c1a;
+}
+
+
+/* Mobile */
+@media (max-width: 767px) {
+  .dashboard {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .sidebar-toggle {
+    display: block;
+    z-index: 1001;
+  }
+
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    height: 100%;
+    width: 250px;
+    background-color: #F9F9F9;
+    transition: left 0.3s ease;
+    z-index: 1000;
+    padding-top: 60px;
+  }
+
+  .sidebar.open {
+    left: 0;
+  }
+
+  .overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.3);
+    z-index: 999;
+  }
+
+  .sidebar .logo {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+
+  header h1 {
+    font-size: 26px;
+    margin-left:80px;
+  }
+
+  header p {
+    font-size: 16px;
+    margin-left:60px;
+  }
+
+  .panels {
+    grid-template-columns: 1fr;
+  }
+
+  .lesson-card,
+  .panel-header,
+  .course-meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .course-panel,
+  .calendar-container {
+    width: 88%;
+    margin-left: 0;
+    padding: 20px;
+  }
+}
+
+
+/* Tablet*/
+@media (min-width: 768px) and (max-width: 1023px) {
+  .dashboard {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 250px;
+    height: 100%;
+    transition: left 0.3s ease;
+    z-index: 1000;
+    border-right: none;
+    border-bottom: 1.3px solid #E4E4E4;
+    padding: 30px 20px;
+  }
+
+  .sidebar.open {
+    left: 0;
+  }
+
+  .content {
+    margin-left: 0 !important;
+  }
+
+
+  .course-panel,
+  .calendar-container {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .panels {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+}
+
