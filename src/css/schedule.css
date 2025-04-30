@@ -1,6 +1,4 @@
-/* --------------------------------------
-   COMMON STYLES (Desktop-first)
--------------------------------------- */
+/* COMMON STYLES */
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
@@ -289,11 +287,8 @@ button.change-btn {
   display: none;
 }
 
-/* --------------------------------------
-   MEDIA QUERIES
--------------------------------------- */
 
-/* Mobile (≤ 480px) */
+/* Mobile */
 @media (max-width: 480px) {
 
   .sidebar-toggle {
@@ -340,7 +335,7 @@ button.change-btn {
   
 }
 
-/* Tablet (481px to 1023px) */
+/* Tablet */
 @media (min-width: 481px) and (max-width: 1023px) {
 
 
@@ -366,9 +361,8 @@ button.change-btn {
   }
 }
 
-/* Desktop (≥ 1024x) — optional overrides */
+/* Desktop */
 @media (min-width: 1024px) {
-  /* Add desktop-specific overrides here if needed */
   .scroll-hint {
     display: none;
   }

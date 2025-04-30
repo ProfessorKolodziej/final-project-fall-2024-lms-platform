@@ -1,4 +1,4 @@
-/* --------------------- COMMON STYLES --------------------- */
+/* COMMON STYLES */
 body {
   margin: 0;
   font-family: 'Poppins', sans-serif;
@@ -434,9 +434,8 @@ header p {
   color: #651c1a;
 }
 
-/* --------------------- MEDIA QUERIES --------------------- */
 
-/* Mobile: up to 767px */
+/* Mobile */
 @media (max-width: 767px) {
   .dashboard {
     flex-direction: column;
@@ -511,7 +510,7 @@ header p {
 }
 
 
-/* Tablet: 768px to 1023px */
+/* Tablet*/
 @media (min-width: 768px) and (max-width: 1023px) {
   .dashboard {
     flex-direction: column;
@@ -555,7 +554,3 @@ header p {
   }
 }
 
-/* Desktop: 1024px and up */
-@media (min-width: 1024px) {
-  /* no additional desktop-specific overrides needed */
-}

@@ -1,6 +1,4 @@
-/* --------------------------------------
-   COMMON STYLES (Desktop-first)
--------------------------------------- */
+/*COMMON STYLES */
 body {
   margin: 0;
   font-family: 'poppins', sans-serif;
@@ -193,11 +191,9 @@ body {
   box-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
 
-/* --------------------------------------
-   MEDIA QUERIES
--------------------------------------- */
 
-/* Mobile (≤ 768px) */
+
+/* Mobile */
 @media (max-width: 768px) {
 
   .sidebar-toggle {
@@ -274,30 +270,30 @@ body {
   .events-grid {
       display: block;
       overflow-y: auto;
-      height: calc(100vh - 120px); /* leave space for top bar/footer */
+      height: calc(100vh - 120px); 
       padding-right: 10px;
     }
   
   .card {
       width: 100%;
       max-width: 360px;
-      margin: 0 auto 20px; /* center the cards and separate vertically */
+      margin: 0 auto 20px; 
     }
   
 }
 
-/* Tablet (≤ 768px) */
-/* For Mobile and Tablet */
+/* Tablet */
+
 @media (min-width: 769px) and (max-width: 1024px) {
   .grid {
     display: block;
     overflow-y: auto;
-    height: 100vh; /* or adjust as needed */
-    padding-bottom: 100px; /* if fixed buttons like backpack */
+    height: 100vh; 
+    padding-bottom: 100px; 
   }
 
   .grid {
-    -webkit-overflow-scrolling: touch; /* iOS smooth scrolling */
+    -webkit-overflow-scrolling: touch;
     scroll-behavior: smooth;
   }
   
@@ -310,10 +306,4 @@ body {
     width: 100%;
     margin-bottom: 20px;
   }
-}
-
-
-/* Desktop (≥ 1024px) — optional overrides */
-@media (min-width: 1024px) {
-  /* Add desktop-specific tweaks here if needed */
 }

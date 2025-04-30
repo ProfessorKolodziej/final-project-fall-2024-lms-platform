@@ -1,6 +1,4 @@
-/* --------------------------------------
-   COMMON STYLES (Desktop-first)
--------------------------------------- */
+/*COMMON STYLES*/
 body {
   margin: 0;
   font-family: 'poppins', sans-serif;
@@ -188,11 +186,7 @@ body {
   color: #161439;
 }
 
-/* --------------------------------------
-   MEDIA QUERIES
--------------------------------------- */
-
-/* Mobile (≤ 480px) */
+/* Mobile */
 @media (max-width: 768px) {
   .sidebar .logo {
     font-size: 20px;
@@ -233,7 +227,7 @@ body {
   .events-grid {
     display: block;
     overflow-y: auto;
-    height: calc(100vh - 120px); /* adjust depending on header/footer */
+    height: calc(100vh - 120px); 
     padding-right: 10px;
   }
   .card {
@@ -263,7 +257,7 @@ body {
   }
 }
 
-/* Tablet (≤ 768px) */
+/* Tablet*/
 @media (min-width: 768px) and (max-width: 1023px) {
   .networking-page {
     flex-direction: column;
@@ -304,7 +298,3 @@ body {
   }
 }
 
-/* Desktop (≥ 1024px) — optional */
-@media (min-width: 1024px) {
-  /* Add overrides here if needed */
-}

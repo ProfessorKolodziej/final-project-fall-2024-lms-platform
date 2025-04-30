@@ -1,6 +1,4 @@
-/* --------------------------------------
-   COMMON STYLES (Desktop-first)
--------------------------------------- */
+/* COMMON STYLES*/
 body {
   margin: 0;
   font-family: 'poppins', sans-serif;
@@ -331,11 +329,7 @@ body {
 }
 
 
-/* --------------------------------------
-   MEDIA QUERIES
--------------------------------------- */
-
-/* Mobile (≤ 480px) */
+/* Mobile */
 @media (min-width: 360px) and (max-width:768px) {
   .sidebar-toggle {
     display: block;
@@ -432,14 +426,14 @@ body {
   
   .stack-container {
   position: relative;
-  width: 140px;   /* increase or decrease width */
-  height: 100px;  /* increase or decrease height */
+  width: 140px;   
+  height: 100px; 
   margin-right:100px;
  }
 
 }
 
-/* Tablet (≤ 768px) */
+/* Tablet */
 @media (min-width: 769px) and (max-width:1023px) {
   .sidebar-toggle {
     display: block;
@@ -536,14 +530,10 @@ body {
   
   .stack-container {
   position: relative;
-  width: 300px;   /* increase or decrease width */
-  height: 200px;  /* increase or decrease height */
+  width: 300px;   
+  height: 200px;  
   margin-right:240px;
  }
 }
 
 
-/* Desktop (≥ 1024px) — optional */
-@media (min-width: 1024px) {
-  /* Add overrides here if needed */
-}

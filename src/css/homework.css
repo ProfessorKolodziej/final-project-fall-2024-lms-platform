@@ -1,6 +1,4 @@
-/* --------------------------------------
-   COMMON STYLES (Desktop-first)
--------------------------------------- */
+/* COMMON STYLES */
 body {
   margin: 0;
   font-family: 'poppins', sans-serif;
@@ -139,7 +137,7 @@ h1 {
   height: 6px;
   background: #651c1a;
   border-radius: 3px;
-  width: 0%; /* JS-controlled */
+  width: 0%; 
 }
 
 .due-date {
@@ -149,11 +147,9 @@ h1 {
   color: #651c1a;
 }
 
-/* --------------------------------------
-   MEDIA QUERIES
--------------------------------------- */
 
-/* Mobile (≤ 768px) */
+
+/* Mobile */
 @media (min-width: 360px) and (max-width:768px) {
   sidebar .logo {
     font-size: 20px;
@@ -193,7 +189,7 @@ h1 {
 
 }
 
-/* Tablet (≤ 768px) */
+/* Tablet */
 @media (min-width: 769px) and (max-width:1023px) {
   .homework-page {
     flex-direction: column;
@@ -206,7 +202,3 @@ h1 {
   }
 }
 
-/* Desktop (≥ 1024px) — optional overrides */
-@media (min-width: 1024px) {
-  /* Add desktop-specific adjustments if needed */
-}
